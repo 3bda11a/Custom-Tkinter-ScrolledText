@@ -35,7 +35,7 @@ class ScrolledText(tk.Frame):
         self.text.config(cursor="")
 
     def text_changed(self, key):
-        if str(self.text.cget('state')) == 'normal':
+        if str(self.text.cget('state')) == 'disabled':
             self.textvariable.set('')
             self.textvariable.set(self.text.get('1.0', tk.END))
         
